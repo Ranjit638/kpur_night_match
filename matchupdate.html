@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Updates</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Sidebar and Content Styles */
+        .side-menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2c3e50;
+            padding-top: 20px;
+            padding-right: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            transition: width 0.3s ease;
+        }
+
+        .side-menu h2 {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .side-menu nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-menu nav ul li {
+            margin: 15px 0;
+        }
+
+        .side-menu nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 20px;
+            display: block;
+            transition: background-color 0.3s, padding-left 0.3s;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+
+        .side-menu nav ul li a:hover,
+        .side-menu nav ul li a.active {
+            background-color: #3498db;
+            color: white;
+            padding-left: 25px;
+        }
+
+        /* Content Styles */
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            width: calc(100% - 270px);
+        }
+
+        .content h1 {
+            font-size: 2em;
+            color: #2c3e50;
+        }
+
+        /* Match Schedule Table */
+        .match-schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .match-schedule th, .match-schedule td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            font-size: 1.2em;
+        }
+
+        .match-schedule th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .match-row {
+            background-color: #f9f9f9;
+        }
+
+        .match-row:hover {
+            background-color: #ecf0f1;
+        }
+
+        .match-row td {
+            font-weight: 500;
+        }
+
+        /* Team Colors */
+        .team-fearless {
+            color: #e74c3c; /* Red for Fearless Fighters */
+        }
+
+        .team-litu {
+            color: #9b59b6; /* Purple for Litu Warrior */
+        }
+
+        .team-supreme {
+            color: #1abc9c; /* Teal for Supreme Spartans */
+        }
+
+        .team-royal {
+            color: #3498db; /* Blue for Royal Challengers */
+        }
+
+        /* Hover Effects */
+        .match-row:hover td {
+            color: #2c3e50;
+        }
+
+        /* Mobile & Tablet Responsiveness */
+        @media (max-width: 768px) {
+            .side-menu {
+                width: 200px;
+            }
+
+            .content {
+                margin-left: 220px;
+            }
+
+            .side-menu h2 {
+                font-size: 1.3em;
+            }
+
+            .side-menu nav ul li a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .side-menu {
+                width: 150px;
+            }
+
+            .content {
+                margin-left: 170px;
+            }
+
+            .side-menu h2 {
+                font-size: 1.1em;
+            }
+
+            .side-menu nav ul li a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="side-menu">
+        <h2>Team List</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="playerlist.html">Player List</a></li>
+                <li><a href="teamlist.html">Team List</a></li>
+                <li><a href="matchupdate.html" class="active">Match Update</a></li>
+                <li><a href="matchresult.html">Match Result</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1>Upcoming Matches</h1>
+        <table class="match-schedule">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Match</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Match 1 -->
+                <tr class="match-row">
+                    <td>1st Date</td>
+                    <td><span class="team-fearless">Royal King</span> vs <span class="team-litu">Litu Warrior</span></td>
+                </tr>
+                <!-- Match 2 -->
+                <tr class="match-row">
+                    <td>2nd Date</td>
+                    <td><span class="team-supreme">Supreme Spartans</span> vs <span class="team-royal">Royal Challengers</span></td>
+                </tr>
+                <!-- Match 3 -->
+                <tr class="match-row">
+                    <td>3rd Date</td>
+                    <td><span class="team-litu">Litu Warrior</span> vs <span class="team-royal">Royal Challengers</span></td>
+                </tr>
+                <!-- Match 4 -->
+                <tr class="match-row">
+                    <td>4th Date</td>
+                    <td><span class="team-fearless">Fearless Fighter</span> vs <span class="team-royal">Royal King</span></td>
+                </tr>
+                <!-- Match 5 -->
+                <tr class="match-row">
+                    <td>5th Date</td>
+                    <td><span class="team-supreme">Supreme Spartans</span> vs <span class="team-fearless">Fearless Fighter</span></td>
+                </tr>
+                <!-- Match 6 -->
+                <tr class="match-row">
+                    <td>6th Date</td>
+                    <td><span class="team-supreme">Supreme Spartans</span> vs <span class="team-royal">Royal King</span></td>
+                </tr>
+                <!-- Match 7 -->
+                <tr class="match-row">
+                    <td>7th Date</td>
+                    <td><span class="team-royal">Royal Challengers</span> vs <span class="team-fearless">Fearless Fighter</span></td>
+                </tr>
+                <!-- Match 8 -->
+                <tr class="match-row">
+                    <td>8th Date</td>
+                    <td><span class="team-litu">Litu Warrior</span> vs <span class="team-supreme">Supreme Spartans</span></td>
+                </tr>
+                <!-- Match 9 -->
+                <tr class="match-row">
+                    <td>9th Date</td>
+                    <td><span class="team-fearless">Fearless Fighter</span> vs <span class="team-litu">Litu Warrior</span></td>
+                </tr>
+                <!-- Match 10 -->
+                <tr class="match-row">
+                    <td>10th Date</td>
+                    <td><span class="team-royal">Royal Challengers</span> vs <span class="team-royal">Royal King</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

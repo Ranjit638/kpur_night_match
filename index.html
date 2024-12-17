@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar with links -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="playerlist.html">Player List</a></li>
+            <li><a href="teamlist.html">Team List</a></li>
+            <li><a href="matchupdate.html">Match Update</a></li>
+            <li><a href="matchresult.html">Match Result</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to the Home Page!</h1>
+    <p>You are logged in successfully.</p>
+
+    <script>
+        // Check if user is logged in by verifying localStorage
+        if (!localStorage.getItem('username') || !localStorage.getItem('password')) {
+            // If no credentials found, redirect to login page
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

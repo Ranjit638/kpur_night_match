@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team List</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Sidebar Styles */
+        .side-menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2c3e50;
+            padding-top: 20px;
+            padding-right: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            transition: width 0.3s ease;
+        }
+
+        .side-menu h2 {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .side-menu nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-menu nav ul li {
+            margin: 15px 0;
+        }
+
+        .side-menu nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 20px;
+            display: block;
+            transition: background-color 0.3s, padding-left 0.3s;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+
+        .side-menu nav ul li a:hover,
+        .side-menu nav ul li a.active {
+            background-color: #3498db;
+            color: white;
+            padding-left: 25px;
+        }
+
+        /* Team List Styles */
+        .team-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .team-list li {
+            margin: 10px 0;
+        }
+
+        .team-list li a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 20px;
+            display: block;
+            background-color: #34495e;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .team-list li a:hover {
+            background-color: #2980b9;
+            padding-left: 25px;
+        }
+
+        /* Mobile & Tablet Responsiveness */
+        @media (max-width: 768px) {
+            .side-menu {
+                width: 200px;
+            }
+
+            .side-menu h2 {
+                font-size: 1.3em;
+            }
+
+            .side-menu nav ul li a {
+                font-size: 16px;
+            }
+
+            .team-list li a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .side-menu {
+                width: 150px;
+            }
+
+            .side-menu h2 {
+                font-size: 1.1em;
+            }
+
+            .side-menu nav ul li a {
+                font-size: 14px;
+            }
+
+            .team-list li a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="side-menu">
+        <h2>Team List</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="teamlist.html" class="active">Team List</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <h2>Teams</h2>
+        <ul class="team-list">
+            <li><a href="deccan_chargers.html">Deccan Chargers</a></li>
+            <li><a href="litu_warrior.html">Litu Warriors</a></li>
+            <li><a href="royal_king.html">Royal King</a></li>
+            <li><a href="royal_challengers.html">Royal Challengers</a></li>
+            <li><a href="sixer_king.html">Sixer King</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
