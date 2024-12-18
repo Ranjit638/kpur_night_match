@@ -4,25 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Resetting default margins and paddings */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #3498db;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 1s ease-out;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: color 0.3s, transform 0.3s, background-color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #ffffff;
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        /* Contact section styles */
+        .contact-container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .contact-container h1 {
+            font-size: 2.5em;
+            color: #3498db;
+            margin-bottom: 20px;
+            animation: bounceIn 1s ease-out;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        /* Contact links */
+        .contact-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: zoomIn 1.5s ease-out;
+        }
+
+        .contact-links a {
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+            background-color: #ecf0f1;
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .contact-links a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .contact-links a i {
+            margin-right: 10px;
+        }
+
+        /* Animation effects */
+        @keyframes slideDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .contact-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+                font-size: 30px;
+                color: white;
+                cursor: pointer;
+                margin-left: auto;
+            }
+
+            .contact-links a {
+                font-size: 18px;
+                padding: 12px 18px;
+            }
+
+            /* Show the mobile menu when active */
+            .nav-active {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Navbar -->
     <nav>
-        <ul>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <ul id="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
             <li><a href="playerlist.html">Player List</a></li>
             <li><a href="teamlist.html">Team List</a></li>
             <li><a href="matchupdate.html">Match Update</a></li>
             <li><a href="matchresult.html">Match Result</a></li>
-            <li><a href="logout.html">Logout</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Signup</a></li>
         </ul>
     </nav>
     
-    <h1>Contact Us</h1>
-    <p>Email: contact@cricket.com</p>
-    <p>Phone: +123456789</p>
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+
+        <div class="contact-info">
+            <p><strong>Email:</strong> paniranjit855@gmail.com</p>
+            <p><strong>Phone Options:</strong></p>
+            <p>1.  9348538543</p>
+            <p>2.  8926162235</p>
+            <p>3.  7735284722</p>
+            <p>4.  7981973094</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="contact-links">
+            <a href="https://chat.whatsapp.com/J2QXG7yPCXdBEtCKsXItzk" target="_blank">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/ranjit.16_/profilecard/?igsh=YWRncHlpOXc0ZjR1" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+            </a>
+            <a href="https://t.me/yourprofile" target="_blank">
+                <i class="fa fa-telegram" aria-hidden="true"></i> Telegram
+            </a>
+        </div>
+    </div>
+
+    <!-- Include Font Awesome CDN for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        // Toggle mobile menu on click
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+        
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('nav-active');
+        });
+    </script>
 </body>
 </html>

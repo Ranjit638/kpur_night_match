@@ -4,7 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 3em;
+            color: #FF6347;
+            animation: fadeIn 2s ease-out;
+        }
+
+        h2, h3 {
+            text-align: center;
+            font-size: 2em;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #FF6347;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Animation for Navbar */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Cricket Animation Section */
+        .cricket-animation {
+            text-align: center;
+            margin: 50px 0;
+            animation: zoomIn 2s ease-out;
+        }
+
+        .ball {
+            width: 70px;
+            height: 70px;
+            background-color: #FF6347; /* Cricket ball color */
+            border-radius: 50%;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+
+        /* Bouncing animation for the cricket ball */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* Zoom-in animation */
+        @keyframes zoomIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        /* Cricket Information Section */
+        .cricket-info {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 900px;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Slide-in animation for the cricket info section */
+        @keyframes slideIn {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .cricket-info ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .cricket-info ul li {
+            margin: 15px 0;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            input, button {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .cricket-info h2 {
+                font-size: 1.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            input, button {
+                width: 95%;
+            }
+
+            nav ul li a {
+                padding: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -17,12 +191,37 @@
             <li><a href="teamlist.html">Team List</a></li>
             <li><a href="matchupdate.html">Match Update</a></li>
             <li><a href="matchresult.html">Match Result</a></li>
-            <li><a href="logout.html">Logout</a></li>
         </ul>
     </nav>
 
     <h1>Welcome to the Home Page!</h1>
     <p>You are logged in successfully.</p>
+
+    <!-- Cricket Animation Section -->
+    <div class="cricket-animation">
+        <div class="ball"></div>
+    </div>
+
+    <!-- Cricket Information Section -->
+    <section class="cricket-info">
+        <h2>About Cricket</h2>
+        <p>Cricket is a sport that is deeply embedded in the culture of many countries. It is played with a bat and ball between two teams, each consisting of eleven players. The game’s history spans back centuries, with international competitions like the ICC World Cup showcasing the sport's global appeal.</p>
+
+        <h3>Cricket Fun Facts</h3>
+        <ul>
+            <li>Cricket is one of the oldest team sports in the world, dating back to the 16th century.</li>
+            <li>The longest-ever cricket match lasted for 12 days! It was played between England and South Africa in 1939.</li>
+            <li>Shane Warne, a legendary Australian cricketer, is widely considered one of the greatest bowlers of all time.</li>
+            <li>The fastest-ever ball delivery in cricket was bowled by Shoaib Akhtar at a speed of 161.3 km/h (100.23 mph).</li>
+        </ul>
+
+        <h3>Popular Cricket Formats</h3>
+        <ul>
+            <li><strong>Test Matches:</strong> Played over five days with two innings per side. It's the longest format of the game.</li>
+            <li><strong>ODI (One Day International):</strong> A 50-over format where each team bats for 50 overs. Popular in global tournaments like the World Cup.</li>
+            <li><strong>T20:</strong> A fast-paced format with 20 overs per side. The IPL is one of the most popular leagues for T20 cricket.</li>
+        </ul>
+    </section>
 
     <script>
         // Check if user is logged in by verifying localStorage

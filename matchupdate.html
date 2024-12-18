@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Match Updates</title>
+    <title>Match Timetable</title>
     <style>
         /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s ease;
         }
 
-        /* Sidebar and Content Styles */
+        /* Sidebar Styles */
         .side-menu {
             height: 100%;
             width: 250px;
@@ -27,14 +29,16 @@
             display: flex;
             flex-direction: column;
             transition: width 0.3s ease;
+            animation: slideIn 0.5s ease-out;
         }
 
         .side-menu h2 {
             text-align: center;
             color: white;
             margin-top: 30px;
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: bold;
+            animation: fadeIn 1s ease-out;
         }
 
         .side-menu nav ul {
@@ -56,6 +60,7 @@
             font-size: 18px;
             font-weight: 500;
             border-radius: 5px;
+            animation: fadeInText 1s ease-out;
         }
 
         .side-menu nav ul li a:hover,
@@ -63,107 +68,124 @@
             background-color: #3498db;
             color: white;
             padding-left: 25px;
+            transform: scale(1.1);
         }
 
-        /* Content Styles */
-        .content {
-            margin-left: 270px;
+        /* Match Timetable Styles */
+        .timetable {
+            margin-left: 280px;
             padding: 20px;
-            width: calc(100% - 270px);
+            animation: fadeInContent 1s ease-out;
         }
 
-        .content h1 {
-            font-size: 2em;
+        .timetable h2 {
+            text-align: center;
+            font-size: 2.5em;
             color: #2c3e50;
+            margin-bottom: 30px;
+            animation: bounceIn 1s ease-out;
         }
 
-        /* Match Schedule Table */
-        .match-schedule {
+        .timetable h3 {
+            font-size: 1.8em;
+            color: #3498db;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        .timetable table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            animation: zoomIn 0.5s ease-out;
+        }
+
+        .timetable table, th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: center;
         }
 
-        .match-schedule th, .match-schedule td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            font-size: 1.2em;
-        }
-
-        .match-schedule th {
+        .timetable th {
             background-color: #2c3e50;
             color: white;
+            font-size: 1.1em;
+            animation: fadeInText 2s ease-out;
         }
 
-        .match-row {
+        .timetable td {
             background-color: #f9f9f9;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
         }
 
-        .match-row:hover {
-            background-color: #ecf0f1;
+        .timetable td.empty {
+            background-color: #e0e0e0;
+            color: #7f8c8d;
         }
 
-        .match-row td {
-            font-weight: 500;
+        .timetable td:hover {
+            background-color: #3498db;
+            color: white;
+            transform: scale(1.05);
         }
 
-        /* Team Colors */
-        .team-fearless {
-            color: #e74c3c; /* Red for Fearless Fighters */
+        /* Animations */
+        @keyframes slideIn {
+            0% { transform: translateX(-250px); }
+            100% { transform: translateX(0); }
         }
 
-        .team-litu {
-            color: #9b59b6; /* Purple for Litu Warrior */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
-        .team-supreme {
-            color: #1abc9c; /* Teal for Supreme Spartans */
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
-        .team-royal {
-            color: #3498db; /* Blue for Royal Challengers */
+        @keyframes fadeInContent {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Hover Effects */
-        .match-row:hover td {
-            color: #2c3e50;
+        @keyframes bounceIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
 
-        /* Mobile & Tablet Responsiveness */
+        @keyframes zoomIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .side-menu {
                 width: 200px;
             }
 
-            .content {
+            .timetable {
                 margin-left: 220px;
             }
 
-            .side-menu h2 {
-                font-size: 1.3em;
+            .timetable h2 {
+                font-size: 2em;
             }
 
             .side-menu nav ul li a {
                 font-size: 16px;
             }
-        }
 
-        @media (max-width: 480px) {
-            .side-menu {
-                width: 150px;
+            .timetable table, th, td {
+                font-size: 1em;
             }
 
-            .content {
-                margin-left: 170px;
-            }
-
-            .side-menu h2 {
-                font-size: 1.1em;
-            }
-
-            .side-menu nav ul li a {
-                font-size: 14px;
+            .timetable td.empty {
+                font-size: 0.9em;
             }
         }
     </style>
@@ -171,79 +193,180 @@
 <body>
 
     <div class="side-menu">
-        <h2>Team List</h2>
+        <h2>Match Timetable</h2>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="playerlist.html">Player List</a></li>
                 <li><a href="teamlist.html">Team List</a></li>
-                <li><a href="matchupdate.html" class="active">Match Update</a></li>
-                <li><a href="matchresult.html">Match Result</a></li>
-                <li><a href="logout.html">Logout</a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="content">
-        <h1>Upcoming Matches</h1>
-        <table class="match-schedule">
+    <div class="timetable">
+        <h2>Match Schedule</h2>
+
+        <!-- 20th December 2024 -->
+        <h3>20/12/2024</h3>
+        <table>
             <thead>
                 <tr>
-                    <th>Date</th>
+                    <th>Phase</th>
                     <th>Match</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Match 1 -->
-                <tr class="match-row">
-                    <td>1st Date</td>
-                    <td><span class="team-fearless">Royal King</span> vs <span class="team-litu">Litu Warrior</span></td>
+                <tr>
+                    <td>1st</td>
+                    <td>Fearless Fighter vs Litu Warrior</td>
                 </tr>
-                <!-- Match 2 -->
-                <tr class="match-row">
-                    <td>2nd Date</td>
-                    <td><span class="team-supreme">Supreme Spartans</span> vs <span class="team-royal">Royal Challengers</span></td>
+                <tr>
+                    <td>2nd</td>
+                    <td>Royal King vs Royal Challengers</td>
                 </tr>
-                <!-- Match 3 -->
-                <tr class="match-row">
-                    <td>3rd Date</td>
-                    <td><span class="team-litu">Litu Warrior</span> vs <span class="team-royal">Royal Challengers</span></td>
+                <tr>
+                    <td>3rd</td>
+                    <td>Supreme Spartans vs Fearless Fighter</td>
                 </tr>
-                <!-- Match 4 -->
-                <tr class="match-row">
-                    <td>4th Date</td>
-                    <td><span class="team-fearless">Fearless Fighter</span> vs <span class="team-royal">Royal King</span></td>
+                <tr>
+                    <td>4th</td>
+                    <td>Royal Challengers vs Supreme Spartans</td>
                 </tr>
-                <!-- Match 5 -->
-                <tr class="match-row">
-                    <td>5th Date</td>
-                    <td><span class="team-supreme">Supreme Spartans</span> vs <span class="team-fearless">Fearless Fighter</span></td>
+                <tr>
+                    <td>5th</td>
+                    <td>Litu warrior vs Royal king</td>
                 </tr>
-                <!-- Match 6 -->
-                <tr class="match-row">
-                    <td>6th Date</td>
-                    <td><span class="team-supreme">Supreme Spartans</span> vs <span class="team-royal">Royal King</span></td>
+            </tbody>
+        </table>
+
+        <!-- 21st December 2024 -->
+        <h3>21/12/2024</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Match</th>
                 </tr>
-                <!-- Match 7 -->
-                <tr class="match-row">
-                    <td>7th Date</td>
-                    <td><span class="team-royal">Royal Challengers</span> vs <span class="team-fearless">Fearless Fighter</span></td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1st</td>
+                    <td>Litu Warrior vs Supreme Spartans</td>
                 </tr>
-                <!-- Match 8 -->
-                <tr class="match-row">
-                    <td>8th Date</td>
-                    <td><span class="team-litu">Litu Warrior</span> vs <span class="team-supreme">Supreme Spartans</span></td>
+                <tr>
+                    <td>2nd</td>
+                    <td>Fearless Fighter vs Royal Challengers</td>
                 </tr>
-                <!-- Match 9 -->
-                <tr class="match-row">
-                    <td>9th Date</td>
-                    <td><span class="team-fearless">Fearless Fighter</span> vs <span class="team-litu">Litu Warrior</span></td>
+                <tr>
+                    <td>3rd</td>
+                    <td>Royal Challengers vs Litu Warrior</td>
                 </tr>
-                <!-- Match 10 -->
-                <tr class="match-row">
-                    <td>10th Date</td>
-                    <td><span class="team-royal">Royal Challengers</span> vs <span class="team-royal">Royal King</span></td>
+                <tr>
+                    <td>4th</td>
+                    <td>Fearless Fighter vs Royal King</td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>Supreme Spartans vs Royal King</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 22nd December 2024 -->
+        <h3>22/12/2024</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Match</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1st</td>
+                    <td>Royal King vs Litu Warrior</td>
+                </tr>
+                <tr>
+                    <td>2nd</td>
+                    <td>Supreme Spartans vs Royal Challengers</td>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td>Litu Warrior vs Royal Challengers</td>
+                </tr>
+                <tr>
+                    <td>4th</td>
+                    <td>Fearless Fighter vs Royal King</td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>Supreme Spartans vs Fearless Fighter</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 23rd December 2024 -->
+        <h3>23/12/2024</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Match</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1st</td>
+                    <td>Supreme Spartans vs Royal King</td>
+                </tr>
+                <tr>
+                    <td>2nd</td>
+                    <td>Royal Challengers vs Fearless Fighter</td>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td>Litu Warrior vs Supreme Spartans</td>
+                </tr>
+                <tr>
+                    <td>4th</td>
+                    <td>Fearless Fighter vs Litu Warrior</td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>Royal Challengers vs Royal King</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Semi Finals & Final -->
+        <h3>Semi Finals & Final</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Match</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1st</td>
+                    <td class="empty">Empty</td>
+                </tr>
+                <tr>
+                    <td>2nd</td>
+                    <td class="empty">Empty</td>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td class="empty">Empty</td>
+                </tr>
+                <tr>
+                    <td>4th</td>
+                    <td class="empty">Empty</td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td class="empty">Empty</td>
                 </tr>
             </tbody>
         </table>

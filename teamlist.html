@@ -11,6 +11,11 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 250px; /* Ensure space for sidebar */
+            flex-wrap: wrap; /* Allow the images to wrap on smaller screens */
+            transition: background-color 0.3s ease;
         }
 
         /* Sidebar Styles */
@@ -27,6 +32,7 @@
             display: flex;
             flex-direction: column;
             transition: width 0.3s ease;
+            animation: slideIn 0.5s ease-out;
         }
 
         .side-menu h2 {
@@ -35,6 +41,7 @@
             margin-top: 30px;
             font-size: 1.5em;
             font-weight: bold;
+            animation: fadeIn 1s ease-out;
         }
 
         .side-menu nav ul {
@@ -56,6 +63,7 @@
             font-size: 18px;
             font-weight: 500;
             border-radius: 5px;
+            animation: fadeInText 1.5s ease-out;
         }
 
         .side-menu nav ul li a:hover,
@@ -70,10 +78,21 @@
             list-style-type: none;
             padding: 0;
             margin-top: 20px;
+            animation: fadeInContent 1.5s ease-out;
         }
 
         .team-list li {
             margin: 10px 0;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-list li img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
         }
 
         .team-list li a {
@@ -92,40 +111,101 @@
             padding-left: 25px;
         }
 
+        /* Image Styles for Body */
+        .team-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            gap: 20px;
+            margin-top: 30px;
+            padding: 20px;
+            animation: fadeInContent 2s ease-out;
+        }
+
+        .team-images img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-images img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Text About Teams */
+        .team-description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+            color: #333;
+            transition: transform 0.3s ease;
+        }
+
+        .team-description h3 {
+            margin-top: 10px;
+            font-size: 1.3em;
+            color: #2980b9;
+            transition: color 0.3s ease;
+        }
+
+        .team-description:hover h3 {
+            color: #3498db;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            0% { transform: translateX(-250px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInContent {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
         /* Mobile & Tablet Responsiveness */
         @media (max-width: 768px) {
+            body {
+                padding-left: 200px; /* Adjust for smaller sidebar */
+            }
+
             .side-menu {
                 width: 200px;
             }
 
-            .side-menu h2 {
-                font-size: 1.3em;
-            }
-
-            .side-menu nav ul li a {
-                font-size: 16px;
-            }
-
-            .team-list li a {
-                font-size: 16px;
+            .team-images {
+                grid-template-columns: repeat(2, 1fr); /* 2 images per row */
             }
         }
 
         @media (max-width: 480px) {
+            body {
+                padding-left: 150px; /* Adjust for smaller sidebar */
+            }
+
             .side-menu {
                 width: 150px;
             }
 
-            .side-menu h2 {
-                font-size: 1.1em;
-            }
-
-            .side-menu nav ul li a {
-                font-size: 14px;
-            }
-
-            .team-list li a {
-                font-size: 14px;
+            .team-images {
+                grid-template-columns: 1fr; /* 1 image per row */
             }
         }
     </style>
@@ -139,18 +219,45 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="teamlist.html" class="active">Team List</a></li>
-                <li><a href="logout.html">Logout</a></li>
             </ul>
         </nav>
 
         <h2>Teams</h2>
         <ul class="team-list">
-            <li><a href="deccan_chargers.html">Deccan Chargers</a></li>
-            <li><a href="litu_warrior.html">Litu Warriors</a></li>
-            <li><a href="royal_king.html">Royal King</a></li>
-            <li><a href="royal_challengers.html">Royal Challengers</a></li>
-            <li><a href="sixer_king.html">Sixer King</a></li>
+            <li><img src="images/deccan.jpg" alt="Deccan Chargers"> <a href="deccan_chargers.html">Deccan Chargers</a></li>
+            <li><img src="images/litu.jpg" alt="Litu Warriors"> <a href="litu_warrior.html">Litu Warriors</a></li>
+            <li><img src="images/royal_king.jpg" alt="Royal King"> <a href="royal_king.html">Royal King</a></li>
+            <li><img src="images/royal_challengers.jpg" alt="Royal Challengers"> <a href="royal_challengers.html">Royal Challengers</a></li>
+            <li><img src="images/sixer_king.jpg" alt="Sixer King"> <a href="sixer_king.html">Sixer King</a></li>
         </ul>
+    </div>
+
+    <div class="team-images">
+        <div class="team-description">
+            <a href="deccan_chargers.html"><img src="images/deccan.jpg" alt="Deccan Chargers"></a>
+            <h3>Deccan Chargers</h3>
+            <p>The Deccan Chargers are known for their aggressive batting style and have some of the best hitters in the world. Their explosive players make them a team to watch!</p>
+        </div>
+        <div class="team-description">
+            <a href="litu_warrior.html"><img src="images/litu.jpg" alt="Litu Warriors"></a>
+            <h3>Litu Warriors</h3>
+            <p>The Litu Warriors are a team that never gives up, with a solid defense and a strategic approach to their matches. They are known for their resilience in tough situations.</p>
+        </div>
+        <div class="team-description">
+            <a href="royal_king.html"><img src="images/royal_king.jpg" alt="Royal King"></a>
+            <h3>Royal King</h3>
+            <p>The Royal King is a well-balanced team with great leadership. Their consistent performance across all formats makes them a top contender in every match.</p>
+        </div>
+        <div class="team-description">
+            <a href="royal_challengers.html"><img src="images/royal_challengers.jpg" alt="Royal Challengers"></a>
+            <h3>Royal Challengers</h3>
+            <p>The Royal Challengers are known for their strong batting line-up and aggressive fielding. Their high-energy performances often leave the crowd in awe.</p>
+        </div>
+        <div class="team-description">
+            <a href="sixer_king.html"><img src="images/sixer_king.jpg" alt="Sixer King"></a>
+            <h3>Sixer King</h3>
+            <p>The Sixer King is known for their big hitters and ability to dominate on the field. Their relentless drive for success makes them a dangerous team to face.</p>
+        </div>
     </div>
 
 </body>

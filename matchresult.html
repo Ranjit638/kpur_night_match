@@ -15,13 +15,221 @@
             <li><a href="teamlist.html">Team List</a></li>
             <li><a href="matchupdate.html">Match Update</a></li>
             <li><a href="matchresult.html" class="active">Match Result</a></li>
-            <li><a href="logout.html">Logout</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Signup</a></li>
         </ul>
     </nav>
     
-    <h1>Match Result</h1>
-    <p>Match results will appear here.</p>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin: 20px 0 10px;
+            text-decoration: underline;
+            color: #ffcc00;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        /* Table Styling */
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        th, td {
+            border: 1px solid #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1em;
+            color: #333;
+            background-color: #ffffff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        th {
+            background-color: #ff6600;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        td:hover {
+            background-color: #ffcc00;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        /* Animation Effects */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cricket Match Schedule</h1>
+
+    <!-- Year 2021 -->
+    <h2>2021</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Stage</th>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Teams</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Semi Final</td>
+                <td>05-Nov-2021</td>
+                <td>Stadium A</td>
+                <td>Royal King vs Deccan Chargers</td>
+                <td>10:00 AM</td>
+            </tr>
+            <tr>
+                <td>Final</td>
+                <td>10-Nov-2021</td>
+                <td>Stadium B</td>
+                <td>Litu Warrior vs Sixer King</td>
+                <td>06:00 PM</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Year 2022 -->
+    <h2>2022</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Stage</th>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Teams</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Semi Final</td>
+                <td>08-Nov-2022</td>
+                <td>Stadium C</td>
+                <td>Royal Challengers vs Sixer King</td>
+                <td>04:00 PM</td>
+            </tr>
+            <tr>
+                <td>Final</td>
+                <td>15-Nov-2022</td>
+                <td>Stadium D</td>
+                <td>Litu Warrior vs Deccan Chargers</td>
+                <td>08:00 PM</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Year 2023 -->
+    <h2>2023</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Stage</th>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Teams</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Semi Final</td>
+                <td>12-Dec-2023</td>
+                <td>Stadium E</td>
+                <td>Royal King vs Sixer King</td>
+                <td>02:00 PM</td>
+            </tr>
+            <tr>
+                <td>Final</td>
+                <td>18-Dec-2023</td>
+                <td>Stadium F</td>
+                <td>Litu Warrior vs Royal Challengers</td>
+                <td>07:00 PM</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Year 2024 -->
+    <h2>2024</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Stage</th>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Teams</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Semi Final</td>
+                <td></td>
+                <td>Stadium G</td>
+                <td></td>
+                <td>05:00 PM</td>
+            </tr>
+            <tr>
+                <td>Final</td>
+                <td></td>
+                <td>Stadium H</td>
+                <td></td>
+                <td>08:00 PM</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
