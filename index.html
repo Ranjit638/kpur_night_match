@@ -5,36 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 3em;
-            color: #FF6347;
-            animation: fadeIn 2s ease-out;
-        }
-
-        h2, h3 {
-            text-align: center;
-            font-size: 2em;
-            color: #4CAF50;
-            margin: 20px 0;
-        }
-
-        p {
-            text-align: center;
-            font-size: 1.2em;
-            line-height: 1.6;
-            padding: 0 20px;
-        }
+        
 
         /* Navbar Styles */
         nav {
@@ -178,6 +149,131 @@
                 padding: 12px;
             }
         }
+
+        /* General page styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Navbar styles */
+    nav {
+        background-color: #2c3e50;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover effect for navbar links */
+    nav a:hover {
+        background-color: #f39c12;
+        color: #f39c12; /* Change text color to orange */
+        border-radius: 5px;
+    }
+
+    /* Table styles */
+    table {
+        width: 70%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        text-align: center;
+        animation: tableSlideIn 1s ease-out;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #2c3e50;
+        color: white;
+    }
+
+    td {
+        background-color: #ecf0f1;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #f9f9f9;
+    }
+
+    tr:hover {
+        background-color: #f39c12;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Player name hover effect */
+    td:hover {
+        background-color: #f39c12; /* Orange background on hover */
+        color: white; /* White text on hover */
+        cursor: pointer;
+    }
+
+    /* Headings */
+    h2, h3, h4 {
+        text-align: center;
+        color: #2c3e50;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    h4 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes tableSlideIn {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
     </style>
 </head>
 <body>
@@ -191,10 +287,12 @@
             <li><a href="teamlist.html">Team List</a></li>
             <li><a href="matchupdate.html">Match Update</a></li>
             <li><a href="matchresult.html">Match Result</a></li>
+
         </ul>
     </nav>
 
-    <h1>Welcome to the Home Page!</h1>
+    <h1>Welcome to the KPL NIGHT MATCH PAGE!</h1>
+    <h2>CHECK ALL MATCH RECORD IN 2024  !</h2>
     <p>You are logged in successfully.</p>
 
     <!-- Cricket Animation Section -->
@@ -203,53 +301,1044 @@
     </div>
 
     <!-- Cricket Information Section -->
-    <section class="cricket-info">
-        <h2>About Cricket</h2>
-        <p>Cricket is a sport that is deeply embedded in the culture of many countries. It is played with a bat and ball between two teams, each consisting of eleven players. The game’s history spans back centuries, with international competitions like the ICC World Cup showcasing the sport's global appeal.</p>
 
-        <h3>Cricket Fun Facts</h3>
-        <ul>
-            <li>Cricket is one of the oldest team sports in the world, dating back to the 16th century.</li>
-            <li>The longest-ever cricket match lasted for 12 days! It was played between England and South Africa in 1939.</li>
-            <li>Shane Warne, a legendary Australian cricketer, is widely considered one of the greatest bowlers of all time.</li>
-            <li>The fastest-ever ball delivery in cricket was bowled by Shoaib Akhtar at a speed of 161.3 km/h (100.23 mph).</li>
-        </ul>
 
-        <h3>Popular Cricket Formats</h3>
-        <ul>
-            <li><strong>Test Matches:</strong> Played over five days with two innings per side. It's the longest format of the game.</li>
-            <li><strong>ODI (One Day International):</strong> A 50-over format where each team bats for 50 overs. Popular in global tournaments like the World Cup.</li>
-            <li><strong>T20:</strong> A fast-paced format with 20 overs per side. The IPL is one of the most popular leagues for T20 cricket.</li>
-        </ul>
-    </section>
 
-    <!-- Cricket Animation Section -->
-    <div class="cricket-animation">
-        <div class="ball"></div>
-    </div>
+<style>
+    
+</style>
 
-    <!-- Cricket Information Section -->
-    <section class="cricket-info">
-        <h2>About Cricket</h2>
-        <p>Cricket is a sport that is deeply embedded in the culture of many countries. It is played with a bat and ball between two teams, each consisting of eleven players. The game’s history spans back centuries, with international competitions like the ICC World Cup showcasing the sport's global appeal.</p>
 
-        <h3>Cricket Fun Facts</h3>
-        <ul>
-            <li>Cricket is one of the oldest team sports in the world, dating back to the 16th century.</li>
-            <li>The longest-ever cricket match lasted for 12 days! It was played between England and South Africa in 1939.</li>
-            <li>Shane Warne, a legendary Australian cricketer, is widely considered one of the greatest bowlers of all time.</li>
-            <li>The fastest-ever ball delivery in cricket was bowled by Shoaib Akhtar at a speed of 161.3 km/h (100.23 mph).</li>
-        </ul>
+</head>
+<body>
+     <!-- Navbar with links to teams -->
+     
 
-        <h3>Popular Cricket Formats</h3>
-        <ul>
-            <li><strong>Test Matches:</strong> Played over five days with two innings per side. It's the longest format of the game.</li>
-            <li><strong>ODI (One Day International):</strong> A 50-over format where each team bats for 50 overs. Popular in global tournaments like the World Cup.</li>
-            <li><strong>T20:</strong> A fast-paced format with 20 overs per side. The IPL is one of the most popular leagues for T20 cricket.</li>
-        </ul>
-    </section>
+    <h2 style="text-align: center;">Matchups</h2>
 
-   
+    <!-- 1st Match: Fearless Fighter vs Litu Warrior -->
+    <h3 style="text-align: center;">1st Match: Fearless Fighter vs Litu Warrior</h3>
+    <table>
+        <tr>
+            <th>Match No.</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Fearless Fighter</td>
+            <td>Litu Warrior</td>
+        </tr>
+    </table>
+
+    <!-- Fearless Fighter Team -->
+    <h4 style="text-align: center;">Fearless Fighter Team Players</h4>
+    <table>
+        <tr>
+            <th>Player Name</th>
+            <th>Batting (Runs)</th>
+            <th>Bowling (Wickets)</th>
+        </tr>
+        <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+        <tr><td>Chikun Pani</td><td></td><td></td></tr>
+        <tr><td>Gudun</td><td></td><td></td></tr>
+        <tr><td>Incha</td><td></td><td></td></tr>
+        <tr><td>Nirmal</td><td></td><td></td></tr>
+        <tr><td>Ambuja</td><td></td><td></td></tr>
+        <tr><td>Bishnu</td><td></td><td></td></tr>
+        <tr><td>Chagali</td><td></td><td></td></tr>
+    </table>
+
+    <!-- Litu Warrior Team -->
+    <h4 style="text-align: center;">Litu Warrior Team Players</h4>
+    <table>
+        <tr>
+            <th>Player Name</th>
+            <th>Batting (Runs)</th>
+            <th>Bowling (Wickets)</th>
+        </tr>
+        <tr><td>Litu Pani (Captain)</td><td></td><td></td></tr>
+        <tr><td>Rajat Pani</td><td></td><td></td></tr>
+        <tr><td>Prakash</td><td></td><td></td></tr>
+        <tr><td>Arjuna</td><td></td><td></td></tr>
+        <tr><td>Sai</td><td></td><td></td></tr>
+        <tr><td>Nahia</td><td></td><td></td></tr>
+        <tr><td>Swadhin</td><td></td><td></td></tr>
+        <tr><td>Chingudi</td><td></td><td></td></tr>
+    </table>
+
+    <!-- 2nd Match: Royal King vs Royal Challengers -->
+    <h3 style="text-align: center;">2nd Match: Royal King vs Royal Challengers</h3>
+    <table>
+        <tr>
+            <th>Match No.</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Royal King</td>
+            <td>Royal Challengers</td>
+        </tr>
+    </table>
+
+    <!-- Royal King Team -->
+    <h4 style="text-align: center;">Royal King Team Players</h4>
+    <table>
+        <tr>
+            <th>Player Name</th>
+            <th>Batting (Runs)</th>
+            <th>Bowling (Wickets)</th>
+        </tr>
+        <tr><td>Krishna Pani (Captain)</td><td></td><td></td></tr>
+        <tr><td>Tokuna</td><td></td><td></td></tr>
+        <tr><td>Chuin Kalia</td><td></td><td></td></tr>
+        <tr><td>Tapu</td><td></td><td></td></tr>
+        <tr><td>Chaina</td><td></td><td></td></tr>
+        <tr><td>Sikei</td><td></td><td></td></tr>
+        <tr><td>Neuli</td><td></td><td></td></tr>
+        <tr><td>Sanu Bignyan</td><td></td><td></td></tr>
+    </table>
+
+    <!-- Royal Challengers Team -->
+    <h4 style="text-align: center;">Royal Challengers Team Players</h4>
+    <table>
+        <tr>
+            <th>Player Name</th>
+            <th>Batting (Runs)</th>
+            <th>Bowling (Wickets)</th>
+        </tr>
+        <tr><td>Deepak Parida (Captain)</td><td></td><td></td></tr>
+        <tr><td>Shobhagya Pani</td><td></td><td></td></tr>
+        <tr><td>Narendra Pani</td><td></td><td></td></tr>
+        <tr><td>Bhima Malick</td><td></td><td></td></tr>
+        <tr><td>Silu</td><td></td><td></td></tr>
+        <tr><td>Chiku</td><td></td><td></td></tr>
+        <tr><td>Papu</td><td></td><td></td></tr>
+        <tr><td>Mahani</td><td></td><td></td></tr>
+    </table>
+
+   <!-- 3rd Match: Supreme Spartans vs Fearless Fighter -->
+<h3 style="text-align: center;">3rd Match: Supreme Spartans vs Fearless Fighter</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>3rd</td>
+        <td>Supreme Spartans</td>
+        <td>Fearless Fighter</td>
+    </tr>
+</table>
+
+<!-- Supreme Spartans Team -->
+<h4 style="text-align: center;">Supreme Spartans Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Sipun Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Sipun Pani</td><td></td><td></td></tr>
+    <tr><td>Red Deepun</td><td></td><td></td></tr>
+    <tr><td>Akash</td><td></td><td></td></tr>
+    <tr><td>Rahul</td><td></td><td></td></tr>
+    <tr><td>Gendu</td><td></td><td></td></tr>
+    <tr><td>Sonu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Fearless Fighter Team -->
+<h4 style="text-align: center;">Fearless Fighter Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+
+
+   <!-- 4th Match: Royal Challengers vs Supreme Spartans -->
+<h3 style="text-align: center;">4th Match: Royal Challengers vs Supreme Spartans</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>4th</td>
+        <td>Royal Challengers</td>
+        <td>Supreme Spartans</td>
+    </tr>
+</table>
+
+<!-- Royal Challengers Team -->
+<h4 style="text-align: center;">Royal Challengers Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Deepak Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Shobhagya Pani</td><td></td><td></td></tr>
+    <tr><td>Narendra Pani</td><td></td><td></td></tr>
+    <tr><td>Bhima Malick</td><td></td><td></td></tr>
+    <tr><td>Silu</td><td></td><td></td></tr>
+    <tr><td>Chiku</td><td></td><td></td></tr>
+    <tr><td>Papu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Supreme Spartans Team -->
+<h4 style="text-align: center;">Supreme Spartans Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Sipun Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Sipun Pani</td><td></td><td></td></tr>
+    <tr><td>Red Deepun</td><td></td><td></td></tr>
+    <tr><td>Akash</td><td></td><td></td></tr>
+    <tr><td>Rahul</td><td></td><td></td></tr>
+    <tr><td>Gendu</td><td></td><td></td></tr>
+    <tr><td>Sonu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+
+    <!-- 5th Match: Litu Warrior vs Royal King -->
+    <h3 style="text-align: center;">5th Match: Litu Warrior vs Royal King</h3>
+    <table>
+        <tr>
+            <th>Match No.</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>Litu Warrior</td>
+            <td>Royal King</td>
+        </tr>
+    </table>
+
+    <!-- Litu Warrior Team -->
+    <h4 style="text-align: center;">Litu Warrior Team Players</h4>
+    <table>
+        <tr>
+            <th>Player Name</th>
+            <th>Batting (Runs)</th>
+            <th>Bowling (Wickets)</th>
+        </tr>
+        <tr><td>Litu Pani (Captain)</td><td></td><td></td></tr>
+        <tr><td>Rajat Pani</td><td></td><td></td></tr>
+        <tr><td>Prakash</td><td></td><td></td></tr>
+        <tr><td>Arjuna</td><td></td><td></td></tr>
+        <tr><td>Sai</td><td></td><td></td></tr>
+        <tr><td>Nahia</td><td></td><td></td></tr>
+        <tr><td>Swadhin</td><td></td><td></td></tr>
+        <tr><td>Chingudi</td><td></td><td></td></tr>
+    </table>
+
+    <!-- Royal King Team -->
+    <h4 style="text-align: center;">Royal King Team Players</h4>
+    <table>
+        <tr>
+            <th>Player Name</th>
+            <th>Batting (Runs)</th>
+            <th>Bowling (Wickets)</th>
+        </tr>
+        <tr><td>Krishna Pani (Captain)</td><td></td><td></td></tr>
+        <tr><td>Tokuna</td><td></td><td></td></tr>
+        <tr><td>Chuin Kalia</td><td></td><td></td></tr>
+        <tr><td>Tapu</td><td></td><td></td></tr>
+        <tr><td>Chaina</td><td></td><td></td></tr>
+        <tr><td>Sikei</td><td></td><td></td></tr>
+        <tr><td>Neuli</td><td></td><td></td></tr>
+        <tr><td>Sanu Bignyan</td><td></td><td></td></tr>
+    </table>
+
+    <h1>21date match fix run</h1>
+    <!-- 1st Match: Litu Warrior vs Supreme Spartans -->
+<h3 style="text-align: center;">1st Match: Litu Warrior vs Supreme Spartans</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>1st</td>
+        <td>Litu Warrior</td>
+        <td>Supreme Spartans</td>
+    </tr>
+</table>
+
+<!-- Litu Warrior Team -->
+<h4 style="text-align: center;">Litu Warrior Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Litu Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Rajat Pani</td><td></td><td></td></tr>
+    <tr><td>Prakash</td><td></td><td></td></tr>
+    <tr><td>Arjuna</td><td></td><td></td></tr>
+    <tr><td>Sai</td><td></td><td></td></tr>
+    <tr><td>Nahia</td><td></td><td></td></tr>
+    <tr><td>Swadhin</td><td></td><td></td></tr>
+    <tr><td>Chingudi</td><td></td><td></td></tr>
+</table>
+
+<!-- Supreme Spartans Team -->
+<h4 style="text-align: center;">Supreme Spartans Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Sipun Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Sipun Pani</td><td></td><td></td></tr>
+    <tr><td>Red Deepun</td><td></td><td></td></tr>
+    <tr><td>Akash</td><td></td><td></td></tr>
+    <tr><td>Rahul</td><td></td><td></td></tr>
+    <tr><td>Gendu</td><td></td><td></td></tr>
+    <tr><td>Sonu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+<!-- 2nd Match: Fearless Fighter vs Royal Challengers -->
+<h3 style="text-align: center;">2nd Match: Fearless Fighter vs Royal Challengers</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>2nd</td>
+        <td>Fearless Fighter</td>
+        <td>Royal Challengers</td>
+    </tr>
+</table>
+
+<!-- Fearless Fighter Team -->
+<h4 style="text-align: center;">Fearless Fighter Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+
+<!-- Royal Challengers Team -->
+<h4 style="text-align: center;">Royal Challengers Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Deepak Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Shobhagya Pani</td><td></td><td></td></tr>
+    <tr><td>Narendra Pani</td><td></td><td></td></tr>
+    <tr><td>Bhima Malick</td><td></td><td></td></tr>
+    <tr><td>Silu</td><td></td><td></td></tr>
+    <tr><td>Chiku</td><td></td><td></td></tr>
+    <tr><td>Papu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+<!-- 3rd Match: Royal Challengers vs Litu Warrior -->
+<h3 style="text-align: center;">3rd Match: Royal Challengers vs Litu Warrior</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>3rd</td>
+        <td>Royal Challengers</td>
+        <td>Litu Warrior</td>
+    </tr>
+</table>
+
+<!-- Royal Challengers Team -->
+<h4 style="text-align: center;">Royal Challengers Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Deepak Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Shobhagya Pani</td><td></td><td></td></tr>
+    <tr><td>Narendra Pani</td><td></td><td></td></tr>
+    <tr><td>Bhima Malick</td><td></td><td></td></tr>
+    <tr><td>Silu</td><td></td><td></td></tr>
+    <tr><td>Chiku</td><td></td><td></td></tr>
+    <tr><td>Papu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Litu Warrior Team -->
+<h4 style="text-align: center;">Litu Warrior Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Litu Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Rajat Pani</td><td></td><td></td></tr>
+    <tr><td>Prakash</td><td></td><td></td></tr>
+    <tr><td>Arjuna</td><td></td><td></td></tr>
+    <tr><td>Sai</td><td></td><td></td></tr>
+    <tr><td>Nahia</td><td></td><td></td></tr>
+    <tr><td>Swadhin</td><td></td><td></td></tr>
+    <tr><td>Chingudi</td><td></td><td></td></tr>
+</table>
+<!-- 4th Match: Fearless Fighter vs Royal King -->
+<h3 style="text-align: center;">4th Match: Fearless Fighter vs Royal King</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>4th</td>
+        <td>Fearless Fighter</td>
+        <td>Royal King</td>
+    </tr>
+</table>
+
+<!-- Fearless Fighter Team -->
+<h4 style="text-align: center;">Fearless Fighter Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+
+<!-- Royal King Team -->
+<h4 style="text-align: center;">Royal King Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+
+
+<!-- 5th Match: Supreme Spartans vs Royal King -->
+<h3 style="text-align: center;">5th Match: Supreme Spartans vs Royal King</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>5th</td>
+        <td>Supreme Spartans</td>
+        <td>Royal King</td>
+    </tr>
+</table>
+
+<!-- Supreme Spartans Team -->
+<h4 style="text-align: center;">Supreme Spartans Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Sipun Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Sipun Pani</td><td></td><td></td></tr>
+    <tr><td>Red Deepun</td><td></td><td></td></tr>
+    <tr><td>Akash</td><td></td><td></td></tr>
+    <tr><td>Rahul</td><td></td><td></td></tr>
+    <tr><td>Gendu</td><td></td><td></td></tr>
+    <tr><td>Sonu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Royal King Team -->
+<h4 style="text-align: center;">Royal King Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+
+<h1>22 date run score</h1>
+
+<!-- 1st Match: Royal King vs Litu Warrior -->
+<h3 style="text-align: center;">1st Match: Royal King vs Litu Warrior</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>1st</td>
+        <td>Royal King</td>
+        <td>Litu Warrior</td>
+    </tr>
+</table>
+
+<!-- Royal King Team -->
+<h4 style="text-align: center;">Royal King Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Krishna Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Tokuna</td><td></td><td></td></tr>
+    <tr><td>Chuin Kalia</td><td></td><td></td></tr>
+    <tr><td>Tapu</td><td></td><td></td></tr>
+    <tr><td>Chaina</td><td></td><td></td></tr>
+    <tr><td>Sikei</td><td></td><td></td></tr>
+    <tr><td>Neuli</td><td></td><td></td></tr>
+    <tr><td>Sanu Bignyan</td><td></td><td></td></tr>
+</table>
+
+<!-- Litu Warrior Team -->
+<h4 style="text-align: center;">Litu Warrior Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Litu Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Rajat Pani</td><td></td><td></td></tr>
+    <tr><td>Prakash</td><td></td><td></td></tr>
+    <tr><td>Arjuna</td><td></td><td></td></tr>
+    <tr><td>Sai</td><td></td><td></td></tr>
+    <tr><td>Nahia</td><td></td><td></td></tr>
+    <tr><td>Swadhin</td><td></td><td></td></tr>
+    <tr><td>Chingudi</td><td></td><td></td></tr>
+</table>
+<!-- 2nd Match: Supreme Spartans vs Royal Challengers -->
+<h3 style="text-align: center;">2nd Match: Supreme Spartans vs Royal Challengers</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>2nd</td>
+        <td>Supreme Spartans</td>
+        <td>Royal Challengers</td>
+    </tr>
+</table>
+
+<!-- Supreme Spartans Team -->
+<h4 style="text-align: center;">Supreme Spartans Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Sipun Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Sipun Pani</td><td></td><td></td></tr>
+    <tr><td>Red Deepun</td><td></td><td></td></tr>
+    <tr><td>Akash</td><td></td><td></td></tr>
+    <tr><td>Rahul</td><td></td><td></td></tr>
+    <tr><td>Gendu</td><td></td><td></td></tr>
+    <tr><td>Sonu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Royal Challengers Team -->
+<h4 style="text-align: center;">Royal Challengers Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Deepak Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Shobhagya Pani</td><td></td><td></td></tr>
+    <tr><td>Narendra Pani</td><td></td><td></td></tr>
+    <tr><td>Bhima Malick</td><td></td><td></td></tr>
+    <tr><td>Silu</td><td></td><td></td></tr>
+    <tr><td>Chiku</td><td></td><td></td></tr>
+    <tr><td>Papu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+<!-- 3rd Match: Litu Warrior vs Royal Challengers -->
+<h3 style="text-align: center;">3rd Match: Litu Warrior vs Royal Challengers</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>3rd</td>
+        <td>Litu Warrior</td>
+        <td>Royal Challengers</td>
+    </tr>
+</table>
+
+<!-- Litu Warrior Team -->
+<h4 style="text-align: center;">Litu Warrior Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Litu Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Rajat Pani</td><td></td><td></td></tr>
+    <tr><td>Prakash</td><td></td><td></td></tr>
+    <tr><td>Arjuna</td><td></td><td></td></tr>
+    <tr><td>Sai</td><td></td><td></td></tr>
+    <tr><td>Nahia</td><td></td><td></td></tr>
+    <tr><td>Swadhin</td><td></td><td></td></tr>
+    <tr><td>Chingudi</td><td></td><td></td></tr>
+</table>
+
+<!-- Royal Challengers Team -->
+<h4 style="text-align: center;">Royal Challengers Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Deepak Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Shobhagya Pani</td><td></td><td></td></tr>
+    <tr><td>Narendra Pani</td><td></td><td></td></tr>
+    <tr><td>Bhima Malick</td><td></td><td></td></tr>
+    <tr><td>Silu</td><td></td><td></td></tr>
+    <tr><td>Chiku</td><td></td><td></td></tr>
+    <tr><td>Papu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+<!-- 4th Match: Fearless Fighter vs Royal King -->
+<h3 style="text-align: center;">4th Match: Fearless Fighter vs Royal King</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>4th</td>
+        <td>Fearless Fighter</td>
+        <td>Royal King</td>
+    </tr>
+</table>
+
+<!-- Fearless Fighter Team -->
+<h4 style="text-align: center;">Fearless Fighter Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+
+<!-- Royal King Team -->
+<h4 style="text-align: center;">Royal King Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Krishna Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Tokuna</td><td></td><td></td></tr>
+    <tr><td>Chuin Kalia</td><td></td><td></td></tr>
+    <tr><td>Tapu</td><td></td><td></td></tr>
+    <tr><td>Chaina</td><td></td><td></td></tr>
+    <tr><td>Sikei</td><td></td><td></td></tr>
+    <tr><td>Neuli</td><td></td><td></td></tr>
+    <tr><td>Sanu Bignyan</td><td></td><td></td></tr>
+</table>
+<!-- 5th Match: Supreme Spartans vs Fearless Fighter -->
+<h3 style="text-align: center;">5th Match: Supreme Spartans vs Fearless Fighter</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>5th</td>
+        <td>Supreme Spartans</td>
+        <td>Fearless Fighter</td>
+    </tr>
+</table>
+
+<!-- Supreme Spartans Team -->
+<h4 style="text-align: center;">Supreme Spartans Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Sipun Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Sipun Pani</td><td></td><td></td></tr>
+    <tr><td>Red Deepun</td><td></td><td></td></tr>
+    <tr><td>Akash</td><td></td><td></td></tr>
+    <tr><td>Rahul</td><td></td><td></td></tr>
+    <tr><td>Gendu</td><td></td><td></td></tr>
+    <tr><td>Sonu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Fearless Fighter Team -->
+<h4 style="text-align: center;">Fearless Fighter Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+<h1>23 date run score</h1>
+<!-- 1st Match: Supreme Spartans vs Royal King -->
+<h3 style="text-align: center;">1st Match: Supreme Spartans vs Royal King</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>1st</td>
+        <td>Supreme Spartans</td>
+        <td>Royal King</td>
+    </tr>
+</table>
+
+<!-- Supreme Spartans Team -->
+<h4 style="text-align: center;">Supreme Spartans Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Sipun Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Sipun Pani</td><td></td><td></td></tr>
+    <tr><td>Red Deepun</td><td></td><td></td></tr>
+    <tr><td>Akash</td><td></td><td></td></tr>
+    <tr><td>Rahul</td><td></td><td></td></tr>
+    <tr><td>Gendu</td><td></td><td></td></tr>
+    <tr><td>Sonu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Royal King Team -->
+<h4 style="text-align: center;">Royal King Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Krishna Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Tokuna</td><td></td><td></td></tr>
+    <tr><td>Chuin Kalia</td><td></td><td></td></tr>
+    <tr><td>Tapu</td><td></td><td></td></tr>
+    <tr><td>Chaina</td><td></td><td></td></tr>
+    <tr><td>Sikei</td><td></td><td></td></tr>
+    <tr><td>Neuli</td><td></td><td></td></tr>
+    <tr><td>Sanu Bignyan</td><td></td><td></td></tr>
+</table>
+<!-- 2nd Match: Royal Challengers vs Fearless Fighter -->
+<h3 style="text-align: center;">2nd Match: Royal Challengers vs Fearless Fighter</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>2nd</td>
+        <td>Royal Challengers</td>
+        <td>Fearless Fighter</td>
+    </tr>
+</table>
+
+<!-- Royal Challengers Team -->
+<h4 style="text-align: center;">Royal Challengers Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Deepak Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Shobhagya Pani</td><td></td><td></td></tr>
+    <tr><td>Narendra Pani</td><td></td><td></td></tr>
+    <tr><td>Bhima Malick</td><td></td><td></td></tr>
+    <tr><td>Silu</td><td></td><td></td></tr>
+    <tr><td>Chiku</td><td></td><td></td></tr>
+    <tr><td>Papu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Fearless Fighter Team -->
+<h4 style="text-align: center;">Fearless Fighter Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+<!-- 3rd Match: Litu Warrior vs Supreme Spartans -->
+<h3 style="text-align: center;">3rd Match: Litu Warrior vs Supreme Spartans</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>3rd</td>
+        <td>Litu Warrior</td>
+        <td>Supreme Spartans</td>
+    </tr>
+</table>
+
+<!-- Litu Warrior Team -->
+<h4 style="text-align: center;">Litu Warrior Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Litu Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Rajat Pani</td><td></td><td></td></tr>
+    <tr><td>Prakash</td><td></td><td></td></tr>
+    <tr><td>Arjuna</td><td></td><td></td></tr>
+    <tr><td>Sai</td><td></td><td></td></tr>
+    <tr><td>Nahia</td><td></td><td></td></tr>
+    <tr><td>Swadhin</td><td></td><td></td></tr>
+    <tr><td>Chingudi</td><td></td><td></td></tr>
+</table>
+
+<!-- Supreme Spartans Team -->
+<h4 style="text-align: center;">Supreme Spartans Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Sipun Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Sipun Pani</td><td></td><td></td></tr>
+    <tr><td>Red Deepun</td><td></td><td></td></tr>
+    <tr><td>Akash</td><td></td><td></td></tr>
+    <tr><td>Rahul</td><td></td><td></td></tr>
+    <tr><td>Gendu</td><td></td><td></td></tr>
+    <tr><td>Sonu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+<!-- 4th Match: Fearless Fighter vs Litu Warrior -->
+<h3 style="text-align: center;">4th Match: Fearless Fighter vs Litu Warrior</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>4th</td>
+        <td>Fearless Fighter</td>
+        <td>Litu Warrior</td>
+    </tr>
+</table>
+
+<!-- Fearless Fighter Team -->
+<h4 style="text-align: center;">Fearless Fighter Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Ganeshwar Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Chikun Pani</td><td></td><td></td></tr>
+    <tr><td>Gudun</td><td></td><td></td></tr>
+    <tr><td>Incha</td><td></td><td></td></tr>
+    <tr><td>Nirmal</td><td></td><td></td></tr>
+    <tr><td>Ambuja</td><td></td><td></td></tr>
+    <tr><td>Bishnu</td><td></td><td></td></tr>
+    <tr><td>Chagali</td><td></td><td></td></tr>
+</table>
+
+<!-- Litu Warrior Team -->
+<h4 style="text-align: center;">Litu Warrior Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Litu Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Rajat Pani</td><td></td><td></td></tr>
+    <tr><td>Prakash</td><td></td><td></td></tr>
+    <tr><td>Arjuna</td><td></td><td></td></tr>
+    <tr><td>Sai</td><td></td><td></td></tr>
+    <tr><td>Nahia</td><td></td><td></td></tr>
+    <tr><td>Swadhin</td><td></td><td></td></tr>
+    <tr><td>Chingudi</td><td></td><td></td></tr>
+</table>
+<!-- 5th Match: Royal Challengers vs Royal King -->
+<h3 style="text-align: center;">5th Match: Royal Challengers vs Royal King</h3>
+<table>
+    <tr>
+        <th>Match No.</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+    </tr>
+    <tr>
+        <td>5th</td>
+        <td>Royal Challengers</td>
+        <td>Royal King</td>
+    </tr>
+</table>
+
+<!-- Royal Challengers Team -->
+<h4 style="text-align: center;">Royal Challengers Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Deepak Parida (Captain)</td><td></td><td></td></tr>
+    <tr><td>Shobhagya Pani</td><td></td><td></td></tr>
+    <tr><td>Narendra Pani</td><td></td><td></td></tr>
+    <tr><td>Bhima Malick</td><td></td><td></td></tr>
+    <tr><td>Silu</td><td></td><td></td></tr>
+    <tr><td>Chiku</td><td></td><td></td></tr>
+    <tr><td>Papu</td><td></td><td></td></tr>
+    <tr><td>Mahani</td><td></td><td></td></tr>
+</table>
+
+<!-- Royal King Team -->
+<h4 style="text-align: center;">Royal King Team Players</h4>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Batting (Runs)</th>
+        <th>Bowling (Wickets)</th>
+    </tr>
+    <tr><td>Krishna Pani (Captain)</td><td></td><td></td></tr>
+    <tr><td>Tokuna</td><td></td><td></td></tr>
+    <tr><td>Chuin Kalia</td><td></td><td></td></tr>
+    <tr><td>Tapu</td><td></td><td></td></tr>
+    <tr><td>Chaina</td><td></td><td></td></tr>
+    <tr><td>Sikei</td><td></td><td></td></tr>
+    <tr><td>Neuli</td><td></td><td></td></tr>
+    <tr><td>Sanu Bignyan</td><td></td><td></td></tr>
+</table>
+
+
+
+
+
+</body>
+</html>
+
+
 
 </body>
 </html>
